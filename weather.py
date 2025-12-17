@@ -10,7 +10,7 @@ import requests
 
 def data_get():
  city= city_name.get()
- data = requests.get("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=e6e4bd085d2ee40425e1cffbf09989a2").json()
+ data = requests.get("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=").json()
 
  w_lable1.config(text=data["weather"][0]["main"])
  wb_lable1.config(text=data["weather"][0]["description"])
@@ -136,5 +136,6 @@ done_button.place(y=190,height=50,width=100,x=200)
 
                          
 win.mainloop()
+
 
 
